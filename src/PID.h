@@ -13,9 +13,12 @@ public:
   /*
   * Coefficients
   */ 
-  double Kp;
-  double Ki;
-  double Kd;
+  double Kp_;
+  double Ki_;
+  double Kd_;
+
+
+  bool is_error_init;
 
   /*
   * Constructor
@@ -40,7 +43,7 @@ public:
   /*
   * Calculate the total PID error.
   */
-  double TotalError();
+  double CalculateSteering();
 };
 
 #endif /* PID_H */
