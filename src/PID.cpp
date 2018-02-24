@@ -31,6 +31,6 @@ void PID::UpdateError(double cte) {
 }
 
 double PID::CalculateSteering() {
-	return -Kp*p_error - Kd*d_error - Ki*i_error;
+	return -Kp_*p_error - Kd_*d_error - Ki_*i_error;
 }
 
