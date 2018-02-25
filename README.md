@@ -6,6 +6,7 @@ Self-Driving Car Engineer Nanodegree Program
 ## Project Reflection
 
 ### Describes the effect of the P, I, D component of the PID algorithm in the implementation
+
 The P stand for "proportional", it had the most directly effect on the car's steering angle. The P component force the car steer proportional to the target trajectory according to the car's current CTE. Thus it reduce the car's CTE and force the car back to the right track.
 
 The D stand for "differential", it mainly pevernt the car overshots its target. The D component could help smooths the car's steering angle, avoid erratically turning and overshotting.
@@ -13,6 +14,19 @@ The D stand for "differential", it mainly pevernt the car overshots its target. 
 The I stand for "integral", it counteracts error or noise that may occur in the car's action. The I component is compute base on all the perious CTE and it make sure that the car did reach the target trajectory despite all kind of error that may occur during the car's motion.
 
 ### Discusses how to chose the final hyperparameters (P, I, D coefficients)
+
+I chose the hyperparameters manually:
+
+First I set Kp, Ki, and Kd to 0.
+
+Second I Increase Kp until the car can drive in a while with a fairly small CTE.
+
+Third I increase Kd until any overshoot you may have is fairly minimal. 
+
+At last I increase Ki until any error that is still existing is eliminated.
+
+I repeat this process many time and finally got the working hyperparameters.
+
 
 ## Dependencies
 
